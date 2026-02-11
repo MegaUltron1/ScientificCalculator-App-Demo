@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1>Scientific Calculator</h1>
+        <p class="hint">Functions: sin(), cos(), tan(), sqrt(), power(a,b). Constants: pi, e.</p>
+      </header>
+
+      <section class="calc" aria-label="Calculator">
+        <div class="display">
+          <input id="expr" class="expr" inputmode="text" autocomplete="off" spellcheck="false" />
+          <div id="result" class="result" aria-live="polite"></div>
+        </div>
+
+        <div class="keys">
+          <button data-action="clear" class="key key-wide">AC</button>
+          <button data-action="back" class="key">⌫</button>
+          <button data-insert="(" class="key">(</button>
+          <button data-insert=")" class="key">)</button>
+
+          <button data-insert="sin(" class="key fn">sin</button>
+          <button data-insert="cos(" class="key fn">cos</button>
+          <button data-insert="tan(" class="key fn">tan</button>
+          <button data-insert="sqrt(" class="key fn">√</button>
+
+          <button data-insert="7" class="key">7</button>
+          <button data-insert="8" class="key">8</button>
+          <button data-insert="9" class="key">9</button>
+          <button data-insert="/" class="key op">÷</button>
+
+          <button data-insert="4" class="key">4</button>
+          <button data-insert="5" class="key">5</button>
+          <button data-insert="6" class="key">6</button>
+          <button data-insert="*" class="key op">×</button>
+
+          <button data-insert="1" class="key">1</button>
+          <button data-insert="2" class="key">2</button>
+          <button data-insert="3" class="key">3</button>
+          <button data-insert="-" class="key op">−</button>
+
+          <button data-insert="0" class="key">0</button>
+          <button data-insert="." class="key">.</button>
+          <button data-insert="**" class="key op">^</button>
+          <button data-insert="+" class="key op">+</button>
+
+          <button data-insert="pi" class="key const">π</button>
+          <button data-insert="e" class="key const">e</button>
+          <button data-insert="power(" class="key fn">pow</button>
+          <button data-action="equals" class="key key-equals">=</button>
+        </div>
+
+        <p id="error" class="error" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
+
