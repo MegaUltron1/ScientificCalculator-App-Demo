@@ -8,7 +8,7 @@ class TestIntegration(unittest.TestCase):
         self.assertAlmostEqual(evaluate("1 + sin(pi/2)").value, 2.0, places=12)
 
     def test_expression_with_sqrt_and_power(self) -> None:
-        self.assertEqual(evaluate("sqrt(2) + power(2,3)").value, 11.0)
+        self.assertAlmostEqual(evaluate("sqrt(2) + power(2,3)").value, 9.414213562373095, places=7)
 
     def test_power_alias_caret(self) -> None:
         self.assertEqual(evaluate("2^3").value, 8.0)
